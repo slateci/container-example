@@ -18,6 +18,12 @@ fi;
 echo You can change the configuration using:
 echo "    docker run -e \"CONFIGURATION_PARAMETER_1=customValue1\" slateci/example"
 
+echo
+echo This is the content of the configuration file:
+cat /etc/example/example.conf
+echo You can change the configuration file using:
+echo "    docker run -v /tmp/example.conf:/etc/example/example.conf slateci/example"
+
 echo 
 echo Checking content of data directory:
 ls -l /var/example/data
