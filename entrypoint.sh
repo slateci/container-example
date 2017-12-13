@@ -17,3 +17,21 @@ fi;
 
 echo You can change the configuration using:
 echo "    docker run -e \"CONFIGURATION_PARAMETER_1=customValue1\" slateci/example"
+
+echo 
+echo Checking content of data directory:
+ls -l /var/example/data
+echo Adding data
+date >> /var/example/data/content
+echo Updated content
+ls -l /var/example/data
+echo You can provide permanent storage using:
+echo "    docker run -v /tmp/data:/var/example/data slateci/example"
+
+echo 
+echo Checking content of scratch directory:
+ls -l /var/example/scratch
+echo Adding data
+date >> /var/example/scratch/content
+echo Updated content
+ls -l /var/example/scratch

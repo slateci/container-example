@@ -6,4 +6,10 @@ ENV CONFIGURATION_PARAMETER_1=defaultValue1 \
 
 COPY entrypoint.sh /sbin/entrypoint.sh
 
+RUN mkdir -p /var/example/data && \
+    mkdir -p /var/example/scratch
+
+VOLUME ["/var/example/data"]
+VOLUME ["/var/example/scratch"]
+
 ENTRYPOINT ["/sbin/entrypoint.sh"]
