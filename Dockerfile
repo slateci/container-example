@@ -10,7 +10,4 @@ COPY example.conf /etc/example/example.conf
 RUN mkdir -p /var/example/data && \
     mkdir -p /var/example/scratch
 
-VOLUME ["/var/example/data"]
-VOLUME ["/var/example/scratch"]
-
 ENTRYPOINT ["/sbin/entrypoint.sh"]
